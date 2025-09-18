@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('riwayat_lagus', function (Blueprint $table) {
             $table->id('id_play');
-            $table->foreignId('user_id')->constrained('user', 'id_user')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users', 'id_user')->onDelete('cascade');
             $table->foreignId('lagu_id')->constrained('lagus', 'id_lagu')->onDelete('cascade');
-            $table->timestamps();
+            $table->timestamp('played_at')->useCurrent();
         });
     }
 

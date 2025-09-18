@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Users extends Model
 {
+    use HasFactory; 
+
     protected $primaryKey = 'id_user';
     protected $fillable = ['username', 'password', 'level_access'];
 

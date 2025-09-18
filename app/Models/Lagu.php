@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
+
 
 class Lagu extends Model
 {
+    use HasFactory;
     protected $primaryKey = 'id_lagu';
     protected $fillable = ['judul', 'filename', 'artis', 'album', 'cover_album'];
 
